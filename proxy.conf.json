@@ -1,0 +1,7 @@
+{
+    "/": {
+    "target": "http://54.86.191.140:5000",
+    "secure": false,
+    "changeOrigin" : true
+    }
+    }
