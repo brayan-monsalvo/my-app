@@ -14,12 +14,12 @@ export class BasegetService {
   ) { }
 
   consultarBases(): Observable<any> {
-    const url = "http://3.214.137.245:5000/base";
+    const url = "/base";
     return this.http.get(url);
   }
 
   agregarBase(dir : string): void{
-    const url = "https://3.214.137.245:5000/base";
+    const url = "/base";
     this.http.post(url, {"direccion" : dir});
   }
 }

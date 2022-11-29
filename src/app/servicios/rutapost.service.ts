@@ -13,7 +13,7 @@ export class RutapostService {
 
 
   obtenerRuta(numero_ruta : number, lista_direcciones : string[]) : Observable<any> {
-    const url = "http://3.214.137.245:5000/ruta";
+    const url = "/ruta";
 
     return this.http.post(url, {"numero_ruta" : numero_ruta, "lista_destinos": lista_direcciones});
 
