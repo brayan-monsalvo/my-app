@@ -20,6 +20,6 @@ export class BasegetService {
 
   agregarBase(dir : string): void{
     const url = "/base";
-    this.http.post(url, {"direccion" : dir});
+    this.http.post(url, {"direccion" : dir}, {responseType : 'json'});
   }
 }

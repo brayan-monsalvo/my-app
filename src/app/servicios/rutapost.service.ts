@@ -15,7 +15,7 @@ export class RutapostService {
   obtenerRuta(numero_ruta : number, lista_direcciones : string[]) : Observable<any> {
     const url = "/ruta";
 
-    return this.http.post(url, {"numero_ruta" : numero_ruta, "lista_destinos": lista_direcciones});
+    return this.http.post(url, {"numero_ruta" : numero_ruta, "lista_destinos": lista_direcciones}, {responseType : 'json'});
 
   }
 }
