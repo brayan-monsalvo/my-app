@@ -1,7 +1,0 @@
-{
-    "/": {
-    "target": "http://3.214.137.245:5000",
-    "secure": false,
-    "changeOrigin" : true
-    }
-    }
