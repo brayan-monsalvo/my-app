@@ -24,7 +24,7 @@ export class BasegetService {
     httpOptions.headers.append('Content-Type', 'application/json');
     httpOptions.headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
-    const url = "http://localhost:5000/base";
+    const url = "http://3.214.137.245:5000/base";
     return this.http.get(url, httpOptions);
   }
 
@@ -41,7 +41,7 @@ export class BasegetService {
     console.log(dir);
     console.log("entro a agregarBase")
 
-    const url = "http://localhost:5000/base";
+    const url = "http://3.214.137.245:5000/base";
 
     return this.http.post(url, {"direccion" : dir}, httpOptions);
   }
@@ -56,7 +56,7 @@ export class BasegetService {
     httpOptions.headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
     console.log(num_dir);
-    const url = "http://localhost:5000/eliminar-base";
+    const url = "http://3.214.137.245:5000/eliminar-base";
 
     return this.http.post(url, {"numero_base" : num_dir}, httpOptions);
   }
@@ -73,7 +73,7 @@ export class BasegetService {
     console.log(num_dir);
     console.log(dir);
 
-    const url = "http://localhost:5000/base";
+    const url = "http://3.214.137.245:5000/base";
 
     return this.http.put(url, {"numero_base" : num_dir, "direccion" : dir}, httpOptions);
   }
