@@ -35,14 +35,6 @@ export class RutaComponent {
   public numero_ruta : number = 0;
   public lista_direcciones: string[] = [];
 
-
-  agregarNumeroBase(): void{
-    let string_base : string = <string>(document.getElementById("numero_base") as HTMLInputElement).value;
-    this.numero_ruta = +string_base;
-    console.log(this.numero_ruta);
-
-  }
-
   agregarDireccion(): void{
     let direccion : string = <string>(document.getElementById("direcciones") as HTMLInputElement).value;
 
@@ -53,14 +45,15 @@ export class RutaComponent {
   }
 
   async calcularRuta() {
+    let string_base : string = <string>(document.getElementById("numero_base") as HTMLInputElement).value;
+    this.numero_ruta = +string_base;
     const obs = await this.ruta.obtenerRuta(this.numero_ruta, this.lista_direcciones);
+
 
     console.log(this.numero_ruta);
     console.log(this.lista_direcciones);
 
     let instrucciones : FoodNode[] = [];
-    let dirDesde : FoodNode[] = [];
-    let dirHacia : FoodNode[] = [];
     let listaFinal : FoodNode[] = [];
 
     obs.subscribe(res => {

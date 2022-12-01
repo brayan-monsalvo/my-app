@@ -6,18 +6,34 @@
 <h4>Agregar</h4>
 <form>
     <label for="fname">Direccion:</label><br>
-    <input type="text" id="direccion" placeholder="Ingrese la direccion" name="direccion"><br>
+    <input type="text" id="direccion_agregar" placeholder="Ingrese la direccion"><br>
 </form> 
 
 <button (click)="agregarBase()" id="agregar">agregar</button>
 
 <hr class="rounded">
+
 <h4>Eliminar</h4>
 <form>
     <label for="fname">Numero</label><br>
-    <input type="text" id="numero_direccion" placeholder="Ingrese la direccion" name="numero_direccion"><br>
+    <input type="text" id="numero_direccion_eliminar" placeholder="Ingrese el numero"><br>
 </form> 
 
 
-<button onclick="eliminarBase()" id="eliminar">eliminar</button>
+<button (click)="eliminarBase()" id="eliminar">eliminar</button>
+
+<hr class="rounded">
+
+<h4>Actualizar</h4>
+<form>
+    <label for="fname">Numero</label><br>
+    <input type="text" id="numero_direccion_actualizar" placeholder="Ingrese el numero" ><br>
+    <br>
+    <label for="fname">Nueva direccion</label><br>
+    <input type="text" id="direccion_actualizar" placeholder="Ingrese la direccion" ><br>
+</form> 
+
+
+<button (click)="actualizarBase()" id="actualizar">actualizar</button>
+<hr class="rounded">
   
