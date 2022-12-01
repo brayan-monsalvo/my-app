@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable} from 'rxjs';
 
 @Injectable({
@@ -15,7 +15,15 @@ export class RutapostService {
   obtenerRuta(numero_ruta : number, lista_direcciones : string[]) : Observable<any> {
     const url = "http://3.214.137.245:5000/ruta";
 
-    return this.http.post(url, {"numero_ruta" : numero_ruta, "lista_destinos": lista_direcciones}, {responseType : 'json'});
+    const httpOptions = {
+      headers : new HttpHeaders()
+    }
+
+    httpOptions.headers.append('Access-Control-Allow-Origin', '*');
+    httpOptions.headers.append('Content-Type', 'application/json');
+    httpOptions.headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+    return this.http.post(url, {"numero_ruta" : numero_ruta, "lista_destinos": lista_direcciones}, httpOptions);
 
   }
 }

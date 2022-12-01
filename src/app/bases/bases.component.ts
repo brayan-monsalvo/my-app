@@ -14,7 +14,7 @@ export class BasesComponent {
 
 
   async agregarBase() : Promise<void>{
-    const direccion = <string>(document.getElementById("direccion") as HTMLInputElement).value;
+    const direccion = <string>(document.getElementById("direccion_agregar") as HTMLInputElement).value;
 
     console.log(direccion);
 
